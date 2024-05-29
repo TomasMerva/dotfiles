@@ -1,0 +1,27 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
+  f_i3blocks.conf:
+    src: i3blocks.conf
+    dst: ~/.i3blocks.conf
+    chmod: '644'
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+    chmod: '644'
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+    chmod: '644'
+profiles:
+  zephyrusg16:
+    dotfiles:
+    - f_config
+    - f_i3blocks.conf
+    - f_zshrc
+    - f_bashrc
